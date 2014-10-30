@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee&dash;to&dash;go</title>
+	<meta charset="UTF-8">
+	<link rel=stylesheet href="css\Coffee.css">
+	<script src="js\Coffee_Form.js" type="text/javascript"></script>
+</head>
+<body>
+
+<header>
+	<h1 id="site-title">Coffee To Go!</h1>
+</header>
+<form name="Coffeey-Shop"
+		id="order-form"
+		action="Coffee_to_Go.html"
+		onsubmit="return validate()"
+		method="post">	
+	<fieldset>	
+		<legend>Coffee Maker</legend>
+		<label class="imp-labels">Brew Type</label>
+		<br>
+		<div id="Brewers">
+			<input type="radio" name="Brew"><label>&nbsp;Hot</label>
+			<input type="radio" name="Brew"><label>&nbsp;Cold</label>
+			<input type="radio" name="Brew"><label>&nbsp;French Press</label>
+		</div>
+		<hr class="sect-cut">
+
+		<div>
+			<label class="imp-labels">Beans</label>
+			<div id="Bean-Selection">
+				<input type="checkbox" name="French Vanilla"><label>French Vanilla</label><br>
+				<input type="checkbox" name="Hazelnut"><label>Hazelnut</label><br>
+				<input type="checkbox" name="Cocoa"><label>Cocoa</label><br>
+				<input type="checkbox" name="Columbian"><label>Columbian</label><br>
+				<input type="checkbox" name="Green"><label>Green</label><br>
+			</div> 
+		</div>
+		<hr class="sect-cut">
+
+			<input type="checkbox" id="cream" onclick="showCream();">
+		<label class="imp-labels">Cream</label>
+			<br>
+			<div id="cream-check">
+				<div class="float-me">
+					<label>Cream Type</label><br>
+					<select id="cream-dropdown">
+						<option name="default" selected>Pick One</option>
+						<option name="Cream-Thickness">Thick</option>
+						<option name="Cream-Thickness">Regular</option>
+						<option name="Cream-Thickness">Half</option>
+						<option name="Cream-Thickness">Fat Free</option>
+					</select>
+				</div>
+				<div class="float-me">
+					<label>Flavor</label><br>
+					<select id="flavor-dropdown">
+						<option name="default" selected>Pick One</option>
+						<option value="raspberry" name="flavors">Raspberry</option>
+						<option value="thinMint" name="flavors">Thin Mint</option>
+						<option value="caramel" name="flavors">Caramel</option>
+						<option value="lemon" name="flavors">Lemon</option>
+						<option value="scotch" name="flavors">Scotch</option>
+					</select>				
+				</div>
+			</div>
+		
+		<hr class="sect-cut">
+
+		<label>Sugar</label>
+			<input type="text" placeholder="Enter amount in packets">
+		
+		<hr class="sect-cut">
+
+		<label>Salt</label>
+			<input type="number" placeholder="Enter amount in packets">
+		<hr class="sect-cut">
+		
+		<label>Expresso</label>
+			<input type="text" pattern="[0-50]" placeholder="# of shots">
+		<hr class="sect-cut">
+		<div class="range-container">
+			<label class="amount">Amount</label>
+				<input type="range" step="8" max="64" onchange="getAmt(this)" id ="coffee-count">
+				<p id="amount">32 ounces</p>
+				
+		</div>
+	</fieldset>
+	<fieldset id="side-dish">
+		<legend>Side Dish</legend>
+		<textarea placeholder="Please write out your dish here." rows="3"></textarea>
+
+	</fieldset>
+
+
+	<!-- USER ORDER INFORMATION -->
+
+	<fieldset id="user-info">
+		<legend>User Info</legend>
+		<label>Name</label>
+			<input type="text" placeholder="Some One" name ="name" id="name">
+			<br>
+		<label>Date of Birth</label>
+			<input type="date"  data-form-name="date" name="bday" id="bday">
+			<br>
+		<label>Address</label>
+			<textarea rows=3 placeholder="1234 Street Town, State, zip, Country" id="address"></textarea>
+			<br>
+		<label>Sign up for our Newsletter?</label>
+			<input type="checkbox">
+			<br>
+		<label>Email</label>
+			<input type="text" placeholder="myname&commat;some.me" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$">
+			<br>
+		<div class="range-container">
+			<label>Love of Coffee</label>
+				<input id="coffeeLove" type="range" max="10" onload="coffeeLove(this)" onchange="coffeeLove(this)">
+				<p id="love">I love coffee</p>
+				<br>
+		</div>
+	</fieldset>
+		<input id="submit" type="submit" name="Submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700);
+* {
+  margin: 0;
+  padding: 0; }
+
+.float-me:after, #cream:after, .range-container:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.imp-labels {
+  font-style: italic; }
+
+#cream-check {
+  display: none; }
+
+#submit {
+  margin: 20px;
+  font-size: 17px;
+  padding: 4px;
+  background: #44230e;
+  color: #f9e6c8;
+  border: none;
+  border-radius: 5px; }
+  #submit:hover {
+    box-shadow: 0 0 5px #44230e; }
+
+#site-title {
+  margin: 15px;
+  font-variant: small-caps;
+  text-align: center;
+  border-bottom: 2px solid #44230e;
+  border-top: 2px solid #44230e; }
+
+#side-dish textarea {
+  width: 100%; }
+
+.float-me {
+  float: left;
+  margin-right: 2em; }
+  .float-me > label {
+    padding-left: 0px; }
+
+.range-container {
+  display: flex; }
+  .range-container > * {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1em; }
+
+/* Gradient color1 - color2 - color1
+  http://css-tricks.com/examples/hrs/
+*/
+hr.sect-cut {
+  border: 0;
+  height: 1px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -moz-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -ms-linear-gradient(left, #ccc, #333, #ccc);
+  background-image: -o-linear-gradient(left, #ccc, #333, #ccc); }
+
+body {
+  background: #f9e6c8;
+  color: #44230e;
+  font-family: "Open Sans", Calibri, Arial, sans-serif; }
+  body fieldset {
+    margin: 15px;
+    padding: 1em; }
+    body fieldset::first-letter {
+      font-size: 24px;
+      color: #a73f00; }
+    body fieldset > * {
+      margin-bottom: .5em; }
+    body fieldset legend {
+      margin: 0;
+      padding: 5px;
+      font-size: 18px;
+      font-variant: small-caps;
+      font-weight: bold;
+      font-weight: 700; }
+    body fieldset label {
+      display: inline-block;
+      min-width: 4em; }
+    body fieldset input[type=checkbox] {
+      margin-right: 5px; }
+    body fieldset textarea {
+      vertical-align: top; }
+
+/*# sourceMappingURL=Coffee.css.map */
